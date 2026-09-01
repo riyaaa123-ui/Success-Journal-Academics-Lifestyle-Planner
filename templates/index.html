@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Journal</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <!-- Main container that holds both the sidebar and main content -->
+    <div class="container">
+        <!-- Sidebar for academic and lifestyle sections -->
+        <div class="sidebar">
+            <div class="section">
+                <h2>Academic Section</h2>
+                <ul>
+                    <li><a href="/academic/assignments">Assignment Tracker</a></li>
+                    <li><a href="/academic/notes">Notes</a></li>
+                    <li><a href="/academic/daily_todo">Daily To-Do List</a></li>
+                    <li><a href="/academic/weekly_planner">Weekly Planner</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Lifestyle Section</h2>
+                <ul>
+                    <li><a href="/lifestyle/water_tracker">Water Intake Tracker</a></li>
+                    <li><a href="/lifestyle/sleep_tracker">Sleep Tracker</a></li>
+                    <li><a href="/lifestyle/exercise_tracker">Workout Scheduling</a></li>
+                </ul>
+            </div>
+
+            <!-- AI Chatbot Section -->
+            <div class="section chatbot-section">
+                <h2>AI Assistance</h2>
+                <!--<button class="chatbot-btn" onclick="window.location.href='/apiapcheck/'">
+                    <span class="icon">&#128172;</span> Chat with AI
+                </button>-->
+                <a href="/apiapcheck/" class="chatbot-btn">
+                    <span class="s-text">S</span> AI Chatbot
+                </a>
+                
+            </div>
+        </div>
+        
+        <!-- Main content area with welcome message -->
+        <div class="main-content">
+            <div class="welcome-card">
+                <h1>Welcome to Your Success Journal</h1>
+                <p>Your one-stop solution for managing academics and lifestyle.</p>
+                <p>Select a section from the sidebar to get started!</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Sleep Record</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Edit Sleep Record</h1>
+
+    <form method="POST">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" value="{{ sleep.date }}" required><br><br>
+
+        <label for="sleep_hours">Sleep Hours:</label>
+        <input type="number" id="sleep_hours" name="sleep_hours" value="{{ sleep.sleep_hours }}" required><br><br>
+
+        <label for="sleep_quality">Sleep Quality:</label>
+        <select id="sleep_quality" name="sleep_quality" required>
+            <option value="Good" {% if sleep.sleep_quality == 'Good' %}selected{% endif %}>Good</option>
+            <option value="Fair" {% if sleep.sleep_quality == 'Fair' %}selected{% endif %}>Fair</option>
+            <option value="Poor" {% if sleep.sleep_quality == 'Poor' %}selected{% endif %}>Poor</option>
+        </select><br><br>
+
+        <button type="submit">Update Sleep Record</button>
+    </form>
+
+    <a href="/lifestyle/sleep_tracker"><button>Back to Sleep Tracker</button></a>
+</body>
+</html>

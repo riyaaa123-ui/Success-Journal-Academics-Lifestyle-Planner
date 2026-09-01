@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Calendar</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <h1>Task Calendar</h1>
+
+    <div class = "button-container">
+        <a href="/academic/weekly_planner" class="btn"><button>Back to Weekly Planner</button></a>
+    </div>
+
+    <div class="calendar">
+        <!-- Calendar Header: Days of the Week -->
+        <div class="calendar-header">
+            <div>Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div>Saturday</div>
+        </div>
+
+        <!-- Calendar Body -->
+        <div class="calendar-body">
+            {% for week in calendar_data %}
+                <div class="calendar-week">
+                    {% for day in week %}
+                        <div class="calendar-day">
+                            <div class="date">{{ day.date if day.date else '-' }}</div>
+                            <ul>
+                                {% for task in day.tasks %}
+                                    <li>{{ task }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

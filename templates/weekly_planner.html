@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="weekly_planner">
+    <h1>Weekly Planner</h1>
+    <a href="/"><button>Back to Home</button></a>
+    <a href="/academic/show_calendar"><button>Show Calendar</button></a>
+
+
+    <!-- Display Week -->
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                {% for day in days_of_week %}
+                    <td>
+                        <p>{{ day.strftime('%A, %B %d, %Y') }}</p>
+                        
+                        <!-- Display Task for each day -->
+                        {% for task in tasks %}
+                            {% if task.date == day.strftime('%Y-%m-%d') %}
+                                <p>{{ task.task }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        <!-- Add Task Form -->
+                        <form action="/academic/weekly_planner" method="POST">
+                            <input type="hidden" name="date" value="{{ day.strftime('%Y-%m-%d') }}">
+                            <input type="text" name="task" placeholder="Add a task" required>
+                            <button type="submit">Add Task</button>
+
+                        </form>
+                    </td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    
+</body>
+</html>

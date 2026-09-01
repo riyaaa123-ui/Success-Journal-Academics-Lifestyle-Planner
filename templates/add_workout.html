@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Exercise</title>
+    <link rel="stylesheet" href="/static/css/styles.css"> <!-- Link to your CSS file -->
+</head>
+<body class="add_exercise">
+    <header>
+        <h1>Add New Exercise</h1>
+    </header>
+    <main>
+        <form method="POST" action="/lifestyle/add_workout">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="workout">Workout:</label>
+            <input type="text" id="workout" name="workout" placeholder="e.g., Running, Yoga" required><br><br>
+
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" id="duration" name="duration" min="1" placeholder="e.g., 30" required><br><br>
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" placeholder="e.g., Felt great!" rows="4"></textarea><br><br>
+
+            <button type="submit">Add Exercise</button>
+        </form>
+        <br>
+        <a href="http://127.0.0.1:5000/lifestyle/exercise_tracker">
+            <button type="button">Back to Exercise Tracker</button>
+        </a>
+    </main>
+</body>
+</html>

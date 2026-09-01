@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notes</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class = "notes">
+    <h1>Notes</h1>
+    <a href="/academic/notes/add" class="btn"><button>Add Note</button></a>
+    <a href="http://127.0.0.1:5000/"><button>Back to Home</button></a>
+    <div class="notes-container">
+        {% for note in notes %}
+            <div class="note-card">
+                <h1>{{ note.title }}</h1>
+                <h4>{{ note.content }}</h4>
+                <small>{{ note.created_at }}</small>
+                <form action="/academic/notes/delete/{{ note.id }}" method="post" style="display:inline;">
+                    <button type="submit" class="btn-delete">Delete</button>
+                </form>
+                <a href="/academic/notes/edit/{{ note.id }}" class="btn-edit"><button>Edit</button></a>
+                
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

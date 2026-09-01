@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Tracker</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="lifestyle">
+    <h1>Sleep Tracker</h1>
+
+    <div class="button-container">
+        <a href="/"><button>Back to Home</button></a>
+        <a href="/lifestyle/add_sleep"><button>Add New Sleep Record</button></a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+            
+                <th>Date</th>
+                <th>Sleep Hours</th>
+                <th>Sleep Quality</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sleep in sleep_data %}
+                <tr>
+                    
+                    <td>{{ sleep.date }}</td>
+                    <td>{{ sleep.sleep_hours }}</td>
+                    <td>{{ sleep.sleep_quality }}</td>
+                    <td>
+                        <a href="/lifestyle/edit_sleep/{{ sleep.id }}"><button>Edit</button></a>
+                        <form action="/lifestyle/delete_sleep/{{ sleep.id }}" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

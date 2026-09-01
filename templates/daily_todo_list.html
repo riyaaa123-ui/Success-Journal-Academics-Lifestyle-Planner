@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily To-Do List</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="academic">
+    <h1>Daily To-Do List</h1>
+
+    <!-- Navigation Buttons -->
+    <div class="button-container">
+        <a href="/"><button>Back to Home</button></a>
+    </div>
+
+    <!-- Display To-Do Tasks -->
+    <table>
+        <thead>
+            <tr>
+              
+                <th>Task</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for todo in todos %}
+                <tr>
+                    
+                    <td>{{ todo.task }}</td>
+                    <td>
+                        <form action="/academic/delete_todo/{{ todo.id }}" method="POST" style="display:inline;">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Add New Task Form -->
+    <form action="/academic/add_todo" method="POST">
+        <label for="task">New Task:</label>
+        <input type="text" id="task" name="task" required>
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+</html>

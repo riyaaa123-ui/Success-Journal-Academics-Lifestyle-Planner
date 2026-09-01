@@ -1,0 +1,497 @@
+/* =============================
+   Global Styles
+============================= */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    height: 100vh;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; /* Bold for emphasis */
+    color: #2c3e50; /* Darker text color for contrast */
+    text-align: center; /* Center-align the headings */
+    margin: 20px 0;
+
+}
+h2{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; /* Bold for emphasis */
+    color: #ffffff; /* Darker text color for contrast */
+    text-align: center; /* Center-align the headings */
+    margin: 20px 0;
+}
+h4{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: bold; /* Bold for emphasis */
+    color: #2c3e50; /* Darker text color for contrast */
+    text-align: center; /* Center-align the headings */
+    margin: 20px 0;
+}
+
+
+button {
+    background-color: #63797d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 5px;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #445457;
+}
+.button-container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+    margin-top: 20px; 
+}
+
+/* =============================
+   Containers
+============================= */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 80vh;
+    background-color: white;
+    border-radius: 0px;
+    overflow: hidden; 
+    justify-content: center ;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 40px;
+    text-align: center;
+    overflow-y: auto;
+    background-image: url("https://i.pinimg.com/736x/e7/5d/ed/e75dedfe63174ef77303bc17be07f1aa.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    display: flex;
+   
+}
+
+/* =============================
+   Sidebar
+============================= */
+.sidebar {
+    width: 250px;
+    background: #4c6686;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+
+/* =============================
+   Tables
+============================= */
+table {
+    width: 100%;               /* Ensure the table spans the full container width */
+    border-collapse: collapse; /* Collapses the borders between table cells */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;     /* Ensures content within cells wraps when needed */
+}
+table th {
+    background-color: #2e3944;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* =============================
+   Cards
+============================= */
+.welcome-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 100px 100px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+
+}
+
+.welcome-card h1 {
+    font-size: 40px; /* Increase font size for the main heading */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.note-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* =============================
+   Forms
+============================= */
+form {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+input[type="text"], input[type="date"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+/* =============================
+   Trackers
+============================= */
+.sleep-tracker td {
+    background-color: #E3F2FD;
+}
+
+.water-tracker td {
+    background-color: #C8E6C9;
+}
+
+.exercise-tracker td {
+    background-color: #FFEBEE;
+}
+
+
+/* =============================
+   Buttons & Actions
+============================= */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+
+
+/* =============================
+   Responsive Design
+============================= */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+    button {
+        font-size: 14px;
+    }
+    .container, form {
+        width: 95%;
+    }
+}
+
+/* =============================
+   Sidebar Section Spacing Fix
+============================= */
+.sidebar ul li {
+    margin: 15px 0; /* Add spacing between sidebar links */
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #ffffff; /* White text */
+    background-color: #33445b; /* Subtle link background */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #212f42; /* Darker background on hover */
+    color: #e3f2fd;
+}
+
+/* =============================
+   Responsive Adjustment
+============================= */
+@media (max-width: 768px) {
+    .main-content {
+        height: auto; /* Remove fixed height on smaller screens */
+        padding: 30px;
+    }
+    .sidebar {
+        width: 100%; /* Full width sidebar */
+        height: auto;
+    }
+}
+
+
+/* =============================
+   Layout
+============================= */
+.notes, .academic, .water_tracker,.lifestyle, .add_water, .add_assignment, .add_sleep, .exercise_tracker, .add_exercise{
+    top: 0;
+    left: 50px;
+    margin-top: 20px;
+    justify-content: top;
+    flex-direction: column;
+    background-color: #dedede;
+}
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping of cards if space is limited */
+    justify-content: flex-start; /* Center the cards horizontally */
+    align-items: flex-start;  /* Align cards to the top */
+    width: 100%;
+    padding: 20px;
+    gap: 20px; 
+}
+.btn{
+    justify-content: center;
+}
+.note-card {
+    border: 1px solid hsl(0, 0%, 80%);
+    border-radius: 5px;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+    max-width: 600px;  /* Prevents note card from being too wide */
+    margin: 10px;  /* Adds space between the note cards */
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .note-card {
+        width: 80%;  /* On smaller screens, each card takes up 80% of the container width */
+    }
+
+    .notes-container {
+        flex-direction: column;  /* Stack cards vertically on smaller screens */
+        align-items: center;  /* Center the cards */
+    }
+}
+
+.calendar {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: #f1f1f1;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.calendar-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calendar-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.calendar-day {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 100px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.calendar-day .date {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calendar-day ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar-day li {
+    font-size: 0.9em;
+    margin: 2px 0;
+}
+
+/* Chatbot Section Styling */
+/*.chatbot-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.chatbot-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chatbot-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.chatbot-btn .icon {
+    font-size: 18px;
+}*/
+
+/* Chatbot Button Styling */
+.chatbot-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.chatbot-btn:hover {
+    background: linear-gradient(45deg, #0056b3, #003f7f);
+    box-shadow: 0px 10px 20px rgba(0, 123, 255, 0.8);
+    transform: scale(1.1);
+}
+
+/* Pulsating Glow Animation */
+.chatbot-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 123, 255, 0.2);
+    border-radius: 50px;
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 123, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+    }
+}
+
+/* Styling for the "S" */
+.s-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffdd00;
+    text-shadow: 0px 0px 5px #ffdd00, 0px 0px 10px #ffcc00;
+    margin-right: 10px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0px 0px 5px #ffdd00, 0px 0px 10px #ffcc00;
+    }
+    to {
+        text-shadow: 0px 0px 15px #ffdd00, 0px 0px 25px #ffaa00;
+    }
+}
+
+
